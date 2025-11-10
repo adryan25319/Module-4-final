@@ -2,7 +2,7 @@ let productsData = [];
 
 async function loadProducts() {
   try {
-    const response = await fetch("api/products.json");
+    const response = await fetch("API/products.json");
     const products = await response.json();
     productsData = products;
     displayProducts(products);
@@ -53,4 +53,5 @@ document.getElementById("price-filter").addEventListener("change", (e) => {
 });
 
 // Load products on page load
+
 window.addEventListener("DOMContentLoaded", loadProducts)
